@@ -1,4 +1,4 @@
-package b32900Exp025_StrategyDesignPattern;
+package b32900_Exp025_StrategyDesignPattern;
 
 import java.util.ArrayList;
 import java.util.List;

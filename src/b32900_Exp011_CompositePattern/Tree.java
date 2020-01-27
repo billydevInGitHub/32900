@@ -3,7 +3,7 @@ package b32900_Exp011_CompositePattern;
 import java.util.Enumeration;
 import java.util.Vector;
 
-class TreeNode {  
+class TreeNode {  //Exp032 is better than this example !!!!
     
     private String name;  
     private TreeNode parent;  

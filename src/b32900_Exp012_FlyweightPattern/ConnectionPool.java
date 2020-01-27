@@ -9,7 +9,7 @@ public class ConnectionPool {
 
 	 private Vector<Connection> pool;  
      
-	    /*公有属性*/  
+	  /*公有属性*/   
 	    private String url = "jdbc:mysql://localhost:3306/test";  
 	    private String username = "root";  
 	    private String password = "root";  
@@ -19,7 +19,7 @@ public class ConnectionPool {
 	    private static ConnectionPool instance = null;  
 	    Connection conn = null;  
 	  
-	    /*构造方法，做一些初始化工作*/  
+	    /*构造方法，做一些初始化工作*/   
 	    private ConnectionPool() {  
 	        pool = new Vector<Connection>(poolSize);  
 	  
@@ -36,7 +36,7 @@ public class ConnectionPool {
 	        }  
 	    }  
 	  
-	    /* 返回连接到连接池 */  
+	    /* 返回连接到连接池 */   
 	    public synchronized void release() {  //BL: as this is shared by threads, must be synchronized
 	        pool.add(conn);  
 	    }  

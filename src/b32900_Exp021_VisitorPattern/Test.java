@@ -24,10 +24,8 @@ class MySubject implements Subject {
 	  
     @Override  
     public void accept(Visitor visitor) {  
-        visitor.visit(this);  //Billy: I think when MySubject is implemented
-                               //like iterate through file tree, it will only give the visitor parameters
-                               //so visitor can only access the resource it is given and that resouce's public method
-                               //I think the implementation is calling back the visitor's methods !!
+        visitor.visit(this);  //Billy: this is the implementation of calling back  !!
+                              //and this is not a simple callback but a bunch of callback encapsulated within Visitor interface!! 
     }  
   
     @Override  

@@ -54,28 +54,34 @@ public class Prototype implements Cloneable, Serializable {
     //BL: the following added myself
     public static void main(String[] args) throws ClassNotFoundException, IOException, CloneNotSupportedException {
 
-    	
+    	//setup 
     	Prototype prototype = new Prototype(); 
-    	  prototype.setString("this is content string");
+    	  prototype.setString("#this is content string#");
+    	  
     	SubSerializableObject  sbobject= new SubSerializableObject(" I am subobject string!!!");
     	  prototype.setObj(sbobject);
+    	  
+    	//do clone and deep clone
     	Prototype clonedPrototype=(Prototype)(prototype.clone());
     	Prototype deepclonedPrototype=(Prototype)(prototype.deepClone());
 
-    	System.out.println(prototype);
-    	System.out.println(clonedPrototype);  //2 classes are the same; 
-    	System.out.println("Check if prototype==clonedPrototype:"+(prototype==clonedPrototype)); 
+    	//check the difference between clone and deepclone
+    	System.out.println("Original object--------:\r\n"+prototype);
+    	System.out.println("\r\nCloned object--------:\r\n"+clonedPrototype);  //2 classes are the same; 
+    	System.out.println("\r\nCheck if prototype==clonedPrototype:"+(prototype==clonedPrototype)); 
     	System.out.println("Check if prototype member object==clonedPrototype member object:"
     	          +(prototype.getObj()==clonedPrototype.getObj())); //the cloned object's member object still the same
-    	System.out.println(deepclonedPrototype);
-       	System.out.println("Check if prototype==deepClonedPrototype:"+(prototype==deepclonedPrototype)); 
+    	
+    	
+    	System.out.println("\r\nDeep cloned object--------:\r\n"+deepclonedPrototype);
+       	System.out.println("\r\nCheck if prototype==deepClonedPrototype:"+(prototype==deepclonedPrototype)); 
     	System.out.println("Check if prototype member object==clonedPrototype member object:"
   	          +(prototype.getObj()==deepclonedPrototype.getObj()));  //deep cloned object's member object is different 
     }
     
     //BL: the following added myself
     public  String toString() {
-    	return ("Object content: "+getString()+" "+obj); 
+    	return ("Object content: "+getString()+" \r\nInner object: "+obj); 
     	
     }
     
@@ -96,7 +102,7 @@ class SubSerializableObject extends SerializableObject{
 	}
 	public String toString() {
 
-		return "SubSerializableObject:"+super.toString()+" inside class of SubSerializableObject: "+ac;
+		return " #Super Object:"+super.toString()+" \r\n#inner  object within inner object: "+ac;
 
 	}
 }

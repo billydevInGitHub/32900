@@ -25,6 +25,7 @@ class CarDecorator implements Car {
 	@Override
 	public void assemble() {
 		this.car.assemble();
+		System.out.print("<<<");
 	}
 
 }
@@ -64,5 +65,12 @@ public class DecoratorPatternTest {
 		
 		Car sportsLuxuryCar = new SportsCar(new LuxuryCar(new BasicCar()));
 		sportsLuxuryCar.assemble();
+		System.out.println("\n*****");
+		
+		//the following added by billy
+		Car pureDecCar = new CarDecorator(new BasicCar());
+		pureDecCar.assemble();
+		System.out.println("\n*****");
+		
 	}
 }

@@ -50,7 +50,7 @@ public class Test {
 	
 	 public static void main(String[] args) {  
 		  
-	        // 计算9+2-8的值  
+	        // 9+2-8
 	        int result = 
 	        		new Minus().interpret(
 	        		                       (new Context(

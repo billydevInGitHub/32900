@@ -16,7 +16,7 @@ class MyVisitor implements Visitor {
 
 interface Subject {  
     public void accept(Visitor visitor);  
-    public String getSubject();  
+    public String getSubject();  //this getSubject is actually means the resouce, not return the Subject interface!
 }  
 
 

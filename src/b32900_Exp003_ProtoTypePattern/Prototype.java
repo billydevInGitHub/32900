@@ -67,7 +67,7 @@ public class Prototype implements Cloneable, Serializable {
 
     	//check the difference between clone and deepclone
     	System.out.println("Original object--------:\r\n"+prototype);
-    	System.out.println("\r\nCloned object--------:\r\n"+clonedPrototype);  //2 classes are the same; 
+    	System.out.println("\r\nCloned object--------:\r\n"+clonedPrototype);  //2 classes are the same;
     	System.out.println("\r\nCheck if prototype==clonedPrototype:"+(prototype==clonedPrototype)); 
     	System.out.println("Check if prototype member object==clonedPrototype member object:"
     	          +(prototype.getObj()==clonedPrototype.getObj())); //the cloned object's member object still the same
